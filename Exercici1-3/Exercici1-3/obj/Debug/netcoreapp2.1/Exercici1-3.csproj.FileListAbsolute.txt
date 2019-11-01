@@ -1,0 +1,10 @@
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\obj\Debug\netcoreapp2.1\Exercici1-3.csproj.CoreCompileInputs.cache
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\obj\Debug\netcoreapp2.1\Exercici1-3.AssemblyInfoInputs.cache
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\obj\Debug\netcoreapp2.1\Exercici1-3.AssemblyInfo.cs
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\bin\Debug\netcoreapp2.1\Exercici1-3.deps.json
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\bin\Debug\netcoreapp2.1\Exercici1-3.runtimeconfig.json
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\bin\Debug\netcoreapp2.1\Exercici1-3.runtimeconfig.dev.json
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\bin\Debug\netcoreapp2.1\Exercici1-3.dll
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\bin\Debug\netcoreapp2.1\Exercici1-3.pdb
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\obj\Debug\netcoreapp2.1\Exercici1-3.dll
+C:\Users\La Llucana\source\repos\Exercici1-3\Exercici1-3\obj\Debug\netcoreapp2.1\Exercici1-3.pdb

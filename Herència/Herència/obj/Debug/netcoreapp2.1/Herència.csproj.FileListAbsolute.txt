@@ -1,0 +1,11 @@
+C:\Users\La Llucana\source\repos\Herència\Herència\bin\Debug\netcoreapp2.1\Herència.deps.json
+C:\Users\La Llucana\source\repos\Herència\Herència\bin\Debug\netcoreapp2.1\Herència.runtimeconfig.json
+C:\Users\La Llucana\source\repos\Herència\Herència\bin\Debug\netcoreapp2.1\Herència.runtimeconfig.dev.json
+C:\Users\La Llucana\source\repos\Herència\Herència\bin\Debug\netcoreapp2.1\Herència.dll
+C:\Users\La Llucana\source\repos\Herència\Herència\bin\Debug\netcoreapp2.1\Herència.pdb
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.csprojAssemblyReference.cache
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.csproj.CoreCompileInputs.cache
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.AssemblyInfoInputs.cache
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.AssemblyInfo.cs
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.dll
+C:\Users\La Llucana\source\repos\Herència\Herència\obj\Debug\netcoreapp2.1\Herència.pdb

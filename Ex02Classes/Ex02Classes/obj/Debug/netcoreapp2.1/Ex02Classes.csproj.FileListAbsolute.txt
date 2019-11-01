@@ -1,0 +1,11 @@
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\bin\Debug\netcoreapp2.1\Ex02Classes.deps.json
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\bin\Debug\netcoreapp2.1\Ex02Classes.runtimeconfig.json
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\bin\Debug\netcoreapp2.1\Ex02Classes.runtimeconfig.dev.json
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\bin\Debug\netcoreapp2.1\Ex02Classes.dll
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\bin\Debug\netcoreapp2.1\Ex02Classes.pdb
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.csprojAssemblyReference.cache
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.csproj.CoreCompileInputs.cache
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.AssemblyInfoInputs.cache
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.AssemblyInfo.cs
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.dll
+C:\Users\La Llucana\source\repos\Ex02Classes\Ex02Classes\obj\Debug\netcoreapp2.1\Ex02Classes.pdb
