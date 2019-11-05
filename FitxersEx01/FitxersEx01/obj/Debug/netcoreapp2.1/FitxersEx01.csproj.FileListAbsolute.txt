@@ -1,0 +1,11 @@
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\bin\Debug\netcoreapp2.1\FitxersEx01.deps.json
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\bin\Debug\netcoreapp2.1\FitxersEx01.runtimeconfig.json
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\bin\Debug\netcoreapp2.1\FitxersEx01.runtimeconfig.dev.json
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\bin\Debug\netcoreapp2.1\FitxersEx01.dll
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\bin\Debug\netcoreapp2.1\FitxersEx01.pdb
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.csprojAssemblyReference.cache
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.csproj.CoreCompileInputs.cache
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.AssemblyInfoInputs.cache
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.AssemblyInfo.cs
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.dll
+C:\Users\La Llucana\source\repos\FitxersEx01\FitxersEx01\obj\Debug\netcoreapp2.1\FitxersEx01.pdb
