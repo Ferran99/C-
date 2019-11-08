@@ -1,0 +1,10 @@
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\bin\Debug\netcoreapp2.1\ArrayListTest.deps.json
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\bin\Debug\netcoreapp2.1\ArrayListTest.runtimeconfig.json
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\bin\Debug\netcoreapp2.1\ArrayListTest.runtimeconfig.dev.json
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\bin\Debug\netcoreapp2.1\ArrayListTest.dll
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\bin\Debug\netcoreapp2.1\ArrayListTest.pdb
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\obj\Debug\netcoreapp2.1\ArrayListTest.csproj.CoreCompileInputs.cache
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\obj\Debug\netcoreapp2.1\ArrayListTest.AssemblyInfoInputs.cache
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\obj\Debug\netcoreapp2.1\ArrayListTest.AssemblyInfo.cs
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\obj\Debug\netcoreapp2.1\ArrayListTest.dll
+C:\Users\La Llucana\source\repos\ArrayListTest\ArrayListTest\obj\Debug\netcoreapp2.1\ArrayListTest.pdb

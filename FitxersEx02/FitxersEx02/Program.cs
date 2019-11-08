@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 namespace FitxersEx02
 {
@@ -6,49 +7,80 @@ namespace FitxersEx02
     {
         static void Main(string[] args)
         {
-            int l;
-            int total;
-
-            using (StreamReader r = new StreamReader("Ferran.txt"))
+           /* for(int i = 0; i <= 100; i++)
             {
-                int i = 0;
-                while (r.ReadLine() != null) { i++; }
-                total = i;
-            }
-            GetLine(fileName: "Ferran.txt", line: 27, variable: 1);
-
-            void GetLine(string fileName, int line, int variable)
+                File.AppendAllText("Ferran.txt","linia: " +i+"\n");
+            }*/
+            int line = 27;
+            int lActual = 0;
+            if (line > (File.ReadAllLines("Ferran.txt").Length - 1))
             {
-                using (var sr = new StreamReader(fileName))
-                {
-                    int i =  0;
-                    for ( i = variable ; i <= line; i++)
-                        
-                    Console.WriteLine(sr.ReadLine());
-                    l = i;
-                }
+                line = (File.ReadAllLines("Ferran.txt").Length - 1);
+                Console.WriteLine("Atenció el fitxer té menys de 27 línies!! ("+ (line+1) + ")");
+
+                
             }
+                for (int i = 0; i <= line; i++)
+            {
+                string resultado = File.ReadAllLines("Ferran.txt")[i];
+                Console.WriteLine(resultado);
+                lActual = i;
+            }
+            
 
             do
             {
+                int ProximaLinia = lActual + 27;
+
                 if (Console.ReadKey().Key == ConsoleKey.Enter)
                 {
-                    int a = l + 27;
-                    if (a > total)
+                   
+
+
+                    if (ProximaLinia > (File.ReadAllLines("Ferran.txt").Length - 1))
 
                     {
-                        a = total - a;
-                        if (a <= 0) {
-                            Console.WriteLine("S'ha llegit totes les linies del fitxer");
+                        if(lActual < (File.ReadAllLines("Ferran.txt").Length - 1))
+                        {
+                            Console.WriteLine("Llegint últimes línies del fitxer");
+                            for (int i = (lActual + 1); i <= (File.ReadAllLines("Ferran.txt").Length -1 ); i++)
+                            {
+                                string resultado = File.ReadAllLines("Ferran.txt")[i];
+                                Console.WriteLine(resultado);
+                                lActual = i;
+                            }
                         }else
                         {
-                            GetLine(fileName: "Ferran.txt", line: a, variable: 1);
+                            Console.WriteLine("S'ha llegit totes les linies del fitxer");
 
                         }
+
+
+                    } else if(ProximaLinia == (File.ReadAllLines("Ferran.txt").Length - 1))
+                    {
+                        if (lActual < (File.ReadAllLines("Ferran.txt").Length - 1))
+                        {
+                            for (int i = (lActual + 1); i <= (File.ReadAllLines("Ferran.txt").Length - 1); i++)
+                            {
+                                string resultado = File.ReadAllLines("Ferran.txt")[i];
+                                Console.WriteLine(resultado);
+                                lActual = i;
+                            }
+                        }else
+                        {
+                            Console.WriteLine("S'ha llegit totes les linies del fitxer");
+
+                        }
+
                     }
                     else
                     {
-                        GetLine(fileName: "Ferran.txt", line: a, variable: 1);
+                        for(int i = (lActual + 1); i <= ProximaLinia; i++)
+                        {
+                            string resultado = File.ReadAllLines("Ferran.txt")[i];
+                            Console.WriteLine(resultado);
+                            lActual = i;
+                        }
                     }
                 }
 

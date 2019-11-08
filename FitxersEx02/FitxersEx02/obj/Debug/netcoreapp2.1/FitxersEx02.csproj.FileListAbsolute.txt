@@ -8,3 +8,4 @@ C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.AssemblyInfo.cs
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.dll
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.pdb
+C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.csprojAssemblyReference.cache
