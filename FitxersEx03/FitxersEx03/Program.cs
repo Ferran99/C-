@@ -9,31 +9,39 @@ namespace FitxersEx03
         static void Main(string[] args)
         {
             Console.WriteLine("Paraula a buscar: ");
-            StreamReader s = new StreamReader(@"C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\Ferran.txt");
-            string currentLine;
+            string s = "D:\\C-\\FitxersEx02\\FitxersEx02\\bin\\Debug\\netcoreapp2.1\\Ferran.txt";
+            string currentText;
             string searchString = Console.ReadLine().ToLower() ;
-            bool foundText = false;
             int count = 0;
-            
-                do
-                {
-                    currentLine = s.ReadLine();
-                    if (currentLine != null)
-                    {
-                        foundText = currentLine.Contains(searchString);
-                    }
-                if (foundText)
+            String[] Words;
+            currentText = File.ReadAllText(s);
+            Words = currentText.Split(" ");
+
+            for(int i = 0; i<= (Words.Length -1); i++)
+            {
+                
+                if (Words[i].ToString().ToLower().Contains(searchString))
                 {
                     count++;
                 }
             }
-                while (currentLine != null);
-
-            Console.WriteLine(searchString + ": " + count);
-
-               
             
-           
+               
+            if(count > 0)
+            {
+                Console.WriteLine(searchString + ": " + count);
+
+
+            }
+            else 
+            {
+                Console.WriteLine("La paraula que buscava no està en aquest text");
+
+            }
+
+
+
+
         }
     }
 }

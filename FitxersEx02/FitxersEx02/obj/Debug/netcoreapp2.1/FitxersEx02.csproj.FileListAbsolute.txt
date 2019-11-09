@@ -9,3 +9,13 @@ C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.dll
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.pdb
 C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.csprojAssemblyReference.cache
+D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\FitxersEx02.deps.json
+D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\FitxersEx02.runtimeconfig.json
+D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\FitxersEx02.runtimeconfig.dev.json
+D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\FitxersEx02.dll
+D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\FitxersEx02.pdb
+D:\C-\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.csprojAssemblyReference.cache
+D:\C-\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.AssemblyInfoInputs.cache
+D:\C-\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.AssemblyInfo.cs
+D:\C-\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.dll
+D:\C-\FitxersEx02\FitxersEx02\obj\Debug\netcoreapp2.1\FitxersEx02.pdb
