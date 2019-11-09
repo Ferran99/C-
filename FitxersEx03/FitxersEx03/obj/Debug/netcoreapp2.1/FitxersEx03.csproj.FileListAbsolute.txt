@@ -18,3 +18,4 @@ D:\C-\FitxersEx03\FitxersEx03\obj\Debug\netcoreapp2.1\FitxersEx03.AssemblyInfoIn
 D:\C-\FitxersEx03\FitxersEx03\obj\Debug\netcoreapp2.1\FitxersEx03.AssemblyInfo.cs
 D:\C-\FitxersEx03\FitxersEx03\obj\Debug\netcoreapp2.1\FitxersEx03.dll
 D:\C-\FitxersEx03\FitxersEx03\obj\Debug\netcoreapp2.1\FitxersEx03.pdb
+C:\Users\La Llucana\source\repos\FitxersEx03\FitxersEx03\obj\Debug\netcoreapp2.1\FitxersEx03.csprojAssemblyReference.cache

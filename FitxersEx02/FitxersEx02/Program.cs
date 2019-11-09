@@ -7,7 +7,7 @@ namespace FitxersEx02
     {
         static void Main(string[] args)
         {
-            StreamReader s = new StreamReader(@"D:\C-\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\Ferran.txt");
+            StreamReader s = new StreamReader(@"C:\Users\La Llucana\source\repos\FitxersEx02\FitxersEx02\bin\Debug\netcoreapp2.1\Ferran.txt");
             string currentLine;
             int line = 27;
             int lActual = 0;
