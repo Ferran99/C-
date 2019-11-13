@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace UF1.Persistència_en_fitxers
 {
@@ -33,6 +34,8 @@ namespace UF1.Persistència_en_fitxers
 
         public static void vLlegeixFitxer()
         {
+            String paraulesResultants = "";
+            Dictionary<String, int> tematica = new Dictionary<string, int>();
             Console.WriteLine("Indica el nom del fitxer que vols processar: ");
             string nomFitxer = Console.ReadLine();
             string rutaDelFitxer = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", nomFitxer);
@@ -46,7 +49,31 @@ namespace UF1.Persistència_en_fitxers
                 Console.WriteLine("Data: " + dataDeCreacio);
                 int numParaules = nNumParaules(rutaDelFitxer);
                 Console.WriteLine("Numero de paraules: " + numParaules);
-                szTematica(rutaDelFitxer);
+                tematica = szTematica(rutaDelFitxer);
+
+                var NumordenatsPelValor = from element in tematica
+                                                  orderby element.Value
+                                                  descending
+                                                  select element;
+                int nMax = 0;
+                foreach (KeyValuePair<String, int> item in NumordenatsPelValor)
+                {
+                    // Console.WriteLine("{0} Value: {1}", item.Key, item.Value);
+                    paraulesResultants += item.Key + ", ";
+                    nMax++;
+                    if (nMax == 5)
+                    {
+                        break;
+                    }
+                }
+                Console.WriteLine("Temàtica: " + paraulesResultants);
+
+                foreach (KeyValuePair<String, int> item in NumordenatsPelValor)
+                {
+                    Console.WriteLine("{0} Value: {1}", item.Key, item.Value);
+
+                }
+              
 
             }
             else
@@ -78,54 +105,126 @@ namespace UF1.Persistència_en_fitxers
             StreamReader sr = new StreamReader(nomFitxer);
 
             int nComptador = 0;
-            string delimitador = ", . ? ¿ ! ¡ : ; "; //maybe some more delimiters like ?! and so on
+            string delimitador = ", . ? ¿ ! ¡ : ; "; 
             string[] paraulesLinia = null;
             string linia = null;
 
             while (!sr.EndOfStream)
             {
-                linia = sr.ReadLine();//each time you read a line you should split it into the words
+                linia = sr.ReadLine();
                 linia.Trim();
                 paraulesLinia = linia.Split(delimitador.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
                 paraulesLinia = linia.Split(delimitador.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
-                nComptador += paraulesLinia.Length; //and just add how many of them there is
+                nComptador += paraulesLinia.Length; 
             }
 
 
             return nComptador;
         }
 
-        public static /*Dictionary<String, int>*/ void szTematica(String nomFitxer)
+        public static Dictionary<String, int> szTematica(String nomFitxer)
         {
             Dictionary<String, int> tematica = new Dictionary<String, int>();
-            StreamReader sr = new StreamReader(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", nomFitxer));
-            string linia = null;
-            string[] delimitador = null;
-            int nComptador = 0;
+            string sr = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", nomFitxer));
+            string delimitador = ",.?¿!¡:;.. ";
+            string fitxerParaulesProhibides = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", "paraulesProhibides.txt"));
+            string[] paraulesProhibides = null;
             string[] paraulesLinia = null;
-            delimitador = File.ReadAllLines(nomFitxer);
-            while (!sr.EndOfStream)
-            {
-                linia = sr.ReadLine();//each time you read a line you should split it into the words
-                                      // linia.Trim();
-                paraulesLinia = linia.Split(" ");
+         
 
-                for (int i = 0; i< paraulesLinia.Length; i++)
+            fitxerParaulesProhibides = treureAccents(fitxerParaulesProhibides);
+            sr = treureAccents(sr);
+            
+            paraulesLinia = sr.Split(" ");
+            fitxerParaulesProhibides = fitxerParaulesProhibides.ToLower();
+            paraulesProhibides = fitxerParaulesProhibides.Split("\n");
+            
+            for(int i = 0; i < paraulesLinia.Length; i++)
+            {
+               
+
+                paraulesLinia[i] = paraulesLinia[i].ToLower();
+                paraulesLinia[i] = CleanInput(paraulesLinia[i]);
+                paraulesLinia[i] = paraulesLinia[i].Trim(new Char[] { ' ', '*', '.', ',', '!', '¡', '¿', '?' });
+                /* for (int x = 0; x< delimitador.Length; x++)
+                  {
+                      paraulesLinia[i] = paraulesLinia[i].TrimEnd(delimitador[x]);
+                      paraulesLinia[i] = paraulesLinia[i].TrimStart(delimitador[x]);
+                      paraulesLinia[i] = paraulesLinia[i].Trim(new Char[] { '*', '.',',','!','¡','¿','?' });
+
+
+                  }*/
+
+
+                if (tematica.ContainsKey(paraulesLinia[i]))
                 {
-                    Console.WriteLine(paraulesLinia[i]);
-                    for(int x = 0; x < delimitador.Length; x++)
+                    tematica[paraulesLinia[i]] = tematica[paraulesLinia[i]] + 1;
+                }
+                else
+                {
+                    if (!fitxerParaulesProhibides.Contains(paraulesLinia[i]))
                     {
-                        if(paraulesLinia[i][paraulesLinia.Length-1]==)
+                        tematica.Add(paraulesLinia[i], 1);
+
                     }
+                    
 
                 }
+
+
+
+
             }
-           
 
+            
+            
 
-           // return tematica;
+            return tematica;
         }
 
+        public static string treureAccents(String text)
+        {
+            string ambSignes = "áàäéèëíìïóòöúùuÁÀÄÉÈËÍÌÏÓÒÖÚÙÜçÇ";
+            string senseSignes = "aaaeeeiiiooouuuAAAEEEIIIOOOUUUcC";
+
+            StringBuilder textSenseAccents = new StringBuilder(text.Length);
+            int ambAccent;
+            foreach (char caracter in text)
+            {
+                ambAccent = ambSignes.IndexOf(caracter);
+                if (ambAccent > -1)
+                    textSenseAccents.Append(senseSignes.Substring(ambAccent, 1));
+                else
+                    textSenseAccents.Append(caracter);
+            }
+            return textSenseAccents.ToString();
+        }
+
+        static string CleanInput(string strIn)
+        {
+            // Replace invalid characters with empty strings.
+            try
+            {
+                if (strIn.Contains("d'") || strIn.Contains("l'"))
+                {
+                    string cadena = null;
+                    cadena = Regex.Replace(strIn, @"[^\w]", "",
+                                         RegexOptions.None, TimeSpan.FromSeconds(1.5));
+
+                    return cadena.Substring(1);
+                }
+                else
+                {
+                    return strIn;
+                }
+            }
+            // If we timeout when replacing invalid characters, 
+            // we should return Empty.
+            catch (RegexMatchTimeoutException)
+            {
+                return String.Empty;
+            }
+        }
 
 
 

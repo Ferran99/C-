@@ -9,3 +9,13 @@ C:\Users\La Llucana\source\repos\UF1.Persistència_en_fitxers\UF1.Persistència_
 C:\Users\La Llucana\source\repos\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.AssemblyInfo.cs
 C:\Users\La Llucana\source\repos\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.dll
 C:\Users\La Llucana\source\repos\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.pdb
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\bin\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.deps.json
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\bin\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.runtimeconfig.json
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\bin\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.runtimeconfig.dev.json
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\bin\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.dll
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\bin\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.pdb
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.csprojAssemblyReference.cache
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.AssemblyInfoInputs.cache
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.AssemblyInfo.cs
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.dll
+D:\C-\UF1.Persistència_en_fitxers\UF1.Persistència_en_fitxers\obj\Debug\netcoreapp2.1\UF1.Persistència_en_fitxers.pdb
