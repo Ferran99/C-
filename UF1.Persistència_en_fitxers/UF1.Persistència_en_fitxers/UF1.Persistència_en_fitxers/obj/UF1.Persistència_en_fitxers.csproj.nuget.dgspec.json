@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj": {}
+    "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj": {
+    "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
+        "projectUniqueName": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
         "projectName": "UF1.Persistència_en_fitxers",
-        "projectPath": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
-        "packagesPath": "C:\\Users\\La Llucana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\obj\\",
+        "projectPath": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
+        "packagesPath": "C:\\Users\\Ferran Casañé Querol\\.nuget\\packages\\",
+        "outputPath": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\La Llucana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ferran Casañé Querol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -44,16 +43,23 @@
         "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NETCore.App": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

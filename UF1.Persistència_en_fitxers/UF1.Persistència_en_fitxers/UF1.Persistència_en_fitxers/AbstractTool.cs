@@ -8,6 +8,9 @@ using System.Xml;
 
 namespace UF1.Persistència_en_fitxers
 {
+    /// <summary>
+    /// Classe abstracte per analutzar el fitxer de l'usuari
+    /// </summary>
     abstract class AbstractTool
     {
         /// <summary>
@@ -29,7 +32,7 @@ namespace UF1.Persistència_en_fitxers
                 Console.WriteLine("Creant directori " + nomDirectori);
                 Directory.CreateDirectory(nomDirectori);
                 Console.WriteLine("Directori creat correctament");
-                Console.WriteLine("Dipositi els fitxers que vols procesar en el directori: " + nomDirectori);
+                Console.WriteLine("Dipositi els fitxers que vols processar en el directori: " + nomDirectori);
                 Console.WriteLine("Quan estigui, prem-hi la tecla enter...");
                 Console.ReadLine();
             }
@@ -52,11 +55,11 @@ namespace UF1.Persistència_en_fitxers
                 string nomFitxerSenseExtencio = szNomDelFitxer(nomFitxer);
                 string extencioFitxer = szExtencioDelFitxer(nomFitxer);
                 Console.WriteLine("Nom del fitxer: " + nomFitxerSenseExtencio);
-                Console.WriteLine("Exstenció del fitxer: " + extencioFitxer);
+                Console.WriteLine("Extensió del fitxer: " + extencioFitxer);
                 DateTime dataDeCreacio = dateDataCracio(rutaDelFitxer);
                 Console.WriteLine("Data: " + dataDeCreacio);
                 int numParaules = nNumParaules(rutaDelFitxer);
-                Console.WriteLine("Numero de paraules: " + numParaules);
+                Console.WriteLine("Número de paraules: " + numParaules);
                 tematica = szTematica(rutaDelFitxer);
 
                 var NumordenatsPelValor = from element in tematica
@@ -84,7 +87,7 @@ namespace UF1.Persistència_en_fitxers
                 }
                
                 Console.WriteLine("Temàtica: " + paraulesResultants);
-                string solucio = "Nom del fitxer: " + nomFitxerSenseExtencio + "\n" + "Exstenció del fitxer: " + extencioFitxer + "\n" + "Data: " + dataDeCreacio + "\n" + "Numero de paraules: " + numParaules + "\n" + "Temàtica: " + paraulesResultants;
+                string solucio = "Nom del fitxer: " + nomFitxerSenseExtencio + Environment.NewLine + "Extensió del fitxer: " + extencioFitxer + Environment.NewLine + "Data: " + dataDeCreacio + Environment.NewLine + "Número de paraules: " + numParaules + Environment.NewLine + "Temàtica: " + paraulesResultants;
 
                 crearFitxer(solucio);
                 creacioXML(tematica, nomFitxerSenseExtencio);
@@ -249,7 +252,7 @@ namespace UF1.Persistència_en_fitxers
            
             if (File.Exists(rutaDelFitxer)) {
 
-                File.AppendAllText(rutaDelFitxer, "\n\n" + contingut);
+                File.AppendAllText(rutaDelFitxer, Environment.NewLine + Environment.NewLine + contingut);
                 Console.WriteLine("S'ha afegit les dades noves al fitxer solució");
 
             }
