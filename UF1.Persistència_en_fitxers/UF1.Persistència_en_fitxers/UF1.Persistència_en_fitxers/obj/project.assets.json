@@ -688,23 +688,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ferran Casañé Querol\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\La Llucana\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
+      "projectUniqueName": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
       "projectName": "UF1.Persistència_en_fitxers",
-      "projectPath": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
-      "packagesPath": "C:\\Users\\Ferran Casañé Querol\\.nuget\\packages\\",
-      "outputPath": "D:\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\obj\\",
+      "projectPath": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers.csproj",
+      "packagesPath": "C:\\Users\\La Llucana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\La Llucana\\source\\repos\\C-\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\UF1.Persistència_en_fitxers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ferran Casañé Querol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\La Llucana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -730,23 +732,16 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

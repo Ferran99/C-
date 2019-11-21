@@ -5,12 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Collections;
 
 namespace UF1.Persistència_en_fitxers
 {
-    /// <summary>
-    /// Classe abstracte per analutzar el fitxer de l'usuari
-    /// </summary>
     abstract class AbstractTool
     {
         /// <summary>
@@ -32,7 +30,7 @@ namespace UF1.Persistència_en_fitxers
                 Console.WriteLine("Creant directori " + nomDirectori);
                 Directory.CreateDirectory(nomDirectori);
                 Console.WriteLine("Directori creat correctament");
-                Console.WriteLine("Dipositi els fitxers que vols processar en el directori: " + nomDirectori);
+                Console.WriteLine("Dipositi els fitxers que vols procesar en el directori: " + nomDirectori);
                 Console.WriteLine("Quan estigui, prem-hi la tecla enter...");
                 Console.ReadLine();
             }
@@ -47,6 +45,7 @@ namespace UF1.Persistència_en_fitxers
 
             String paraulesResultants = "";
             Dictionary<String, int> tematica = new Dictionary<string, int>();
+            ArrayList paraulesParagraf = new ArrayList();
             Console.WriteLine("Indica el nom del fitxer que vols processar: ");
             string nomFitxer = Console.ReadLine();
             string rutaDelFitxer = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", nomFitxer);
@@ -55,11 +54,11 @@ namespace UF1.Persistència_en_fitxers
                 string nomFitxerSenseExtencio = szNomDelFitxer(nomFitxer);
                 string extencioFitxer = szExtencioDelFitxer(nomFitxer);
                 Console.WriteLine("Nom del fitxer: " + nomFitxerSenseExtencio);
-                Console.WriteLine("Extensió del fitxer: " + extencioFitxer);
+                Console.WriteLine("Exstenció del fitxer: " + extencioFitxer);
                 DateTime dataDeCreacio = dateDataCracio(rutaDelFitxer);
                 Console.WriteLine("Data: " + dataDeCreacio);
                 int numParaules = nNumParaules(rutaDelFitxer);
-                Console.WriteLine("Número de paraules: " + numParaules);
+                Console.WriteLine("Numero de paraules: " + numParaules);
                 tematica = szTematica(rutaDelFitxer);
 
                 var NumordenatsPelValor = from element in tematica
@@ -87,8 +86,14 @@ namespace UF1.Persistència_en_fitxers
                 }
                
                 Console.WriteLine("Temàtica: " + paraulesResultants);
-                string solucio = "Nom del fitxer: " + nomFitxerSenseExtencio + Environment.NewLine + "Extensió del fitxer: " + extencioFitxer + Environment.NewLine + "Data: " + dataDeCreacio + Environment.NewLine + "Número de paraules: " + numParaules + Environment.NewLine + "Temàtica: " + paraulesResultants;
-
+                string solucio = "Nom del fitxer: " + nomFitxerSenseExtencio + "\n" + "Exstenció del fitxer: " + extencioFitxer + "\n" + "Data: " + dataDeCreacio + "\n" + "Numero de paraules: " + numParaules + "\n" + "Temàtica: " + paraulesResultants;
+                paraulesParagraf = szTematicaParagraf(rutaDelFitxer, nomFitxer);
+                int nParagraf = 0;
+                foreach (string paragraph in paraulesParagraf)
+                {
+                    Console.WriteLine("Paragraf " + nParagraf + " tema: " + paragraph);
+                    nParagraf++;
+                }
                 crearFitxer(solucio);
                 creacioXML(tematica, nomFitxerSenseExtencio);
 
@@ -214,6 +219,68 @@ namespace UF1.Persistència_en_fitxers
             return tematica;
         }
 
+        public static ArrayList szTematicaParagraf(string fitxer, string filename)
+        {
+            Dictionary<string, int> tematica = new Dictionary<string, int>();
+            string delimitador = " ,.;:¿?¡!'";
+            string[] linia = null;
+            string lines = null;
+            StreamReader sr = new StreamReader(fitxer);
+            string fitxerParaulesProhibides = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstracTool", "paraulesProhibides.txt");
+            string paraulesProhibides = File.ReadAllText(fitxerParaulesProhibides);
+            string ParaulesResultants = "";
+            int nParaulesRepetides = 1;
+
+            ArrayList paraulesParagraf = new ArrayList();
+
+            while (!sr.EndOfStream)
+            {
+                lines = sr.ReadLine();
+                string[] textParagraf = lines.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                string paragraf = textParagraf[0].ToString();
+                paragraf.Trim();
+                linia = paragraf.Split(delimitador.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 0; i < linia.Length; i++)
+                {
+                    linia[i] = linia[i].ToLower();
+
+                    if (tematica.ContainsKey(linia[i]))
+                    {
+                        tematica[linia[i]]++;
+                    }
+                    else
+                    {
+
+                        if (!paraulesProhibides.Contains(linia[i]))
+                        {
+                            tematica[linia[i]] = 1;
+                        }
+                    }
+                }
+
+                var MaxValors = (from entry in tematica orderby entry.Value descending select entry)
+                   .ToDictionary(pair => pair.Key, pair => pair.Value).Take(5);
+
+               
+                foreach (KeyValuePair<string, int> max in MaxValors)
+                {
+                    if (nParaulesRepetides == 5)
+                    {
+                        ParaulesResultants += max.Key + ".";
+                    }
+                    else
+                    {
+                        ParaulesResultants += max.Key + ", ";
+                    }
+                    nParaulesRepetides++;
+                }
+
+                paraulesParagraf.Add(ParaulesResultants);
+            }
+
+            return paraulesParagraf;
+        }
         /// <summary>
         /// Funció que serveig per treure els apostrofs del text
         /// </summary>
@@ -252,7 +319,7 @@ namespace UF1.Persistència_en_fitxers
            
             if (File.Exists(rutaDelFitxer)) {
 
-                File.AppendAllText(rutaDelFitxer, Environment.NewLine + Environment.NewLine + contingut);
+                File.AppendAllText(rutaDelFitxer, "\n\n" + contingut);
                 Console.WriteLine("S'ha afegit les dades noves al fitxer solució");
 
             }
